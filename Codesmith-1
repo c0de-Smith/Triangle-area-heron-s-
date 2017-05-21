@@ -1,0 +1,35 @@
+# Compute the area of a triangle (using Heron's formula),
+# given its side lengths.
+
+
+
+# Test 1 
+#coordinates 
+x0, y0 = 0, 0
+x1, y1 = 3, 4
+x2, y2 = 1, 1
+
+#calculating length between points
+length1 = ((x0-x1)**2 + (y0-y1)**2)**0.5
+length2 = ((x1-x2)**2 + (y1-y2)**2)**0.5
+length3 = ((x2-x0)**2 + (y2-y0)**2)**0.5
+
+#Using distance formula 
+s= 0.5*( length1 + length2 + length3 )
+
+#using heron's formula
+area = (s*(s-length1)*(s-length2)*(s-length3))**0.5
+
+#printing statement and answer
+print "A triangle with vertices (" + str(x0) + "," + str(y0) + "),",
+print "(" + str(x1) + "," + str(y1) + "), and",
+print "(" + str(x2) + "," + str(y2) + ") has an area of " + str(area) + "."
+
+
+###################################################
+# Expected output
+
+
+# Test 1 output:
+#A triangle with vertices (0,0), (3,4), and (1,1) has an area of 0.5.
+
